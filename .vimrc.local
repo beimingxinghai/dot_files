@@ -1,0 +1,35 @@
+let g:airline_powerline_fonts=1
+"cscope setting
+if has("cscope")
+    set csprg=/usr/bin/cscope
+    set csto=1
+    set cst
+    set nocsverb
+"add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    elseif $CSCOPE_DB!=""
+        cs add $CSCOPE_DB
+    endif
+    set csverb
+endif
+
+nmap <C-_>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>i :vert scs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+inoremap jk <ESC>
