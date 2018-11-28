@@ -1,2 +1,2 @@
-# config_files
+# dot_files
 Hao.Tian's various configuration files
