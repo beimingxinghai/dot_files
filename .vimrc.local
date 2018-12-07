@@ -32,7 +32,7 @@ nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 "keyboard 
-inoremap jk <ESC>
+"inoremap jk <ESC>
 
 nnoremap <F3> :NumbersToggle<CR>
 
@@ -42,3 +42,4 @@ Bundle "WolfgangMehner/bash-support"
 
 "config
 let g:BASH_MapLeader  = '.'
+set nrformats=hex

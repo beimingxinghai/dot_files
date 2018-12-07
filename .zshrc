@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
+export PATH="/opt/sunrise-linux/bin:$PATH"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
@@ -95,3 +95,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gcc="color_compile gcc"
+alias g++="color_compile g++"
+alias make="color_compile make"
+alias ping="prettyping --nolegend"
+alias cat="bat"
+alias top="htop"
+alias help="tldr"
+
+alias arm-hisiv300-linux-gcc="color_compile arm-hisiv300-linux-gcc"
+alias arm-hisiv300-linux-g++="color_compile arm-hisiv300-linux-g++"
+alias arm-hisiv400-linux-gcc="color_compile arm-hisiv400-linux-gcc"
+alias arm-hisiv400-linux-g++="color_compile arm-hisiv400-linux-g++"
+alias arm-hisiv500-linux-gcc="color_compile arm-hisiv500-linux-gcc"
+alias arm-hisiv500-linux-g++="color_compile arm-hisiv500-linux-g++"
+alias arm-hisiv600-linux-gcc="color_compile arm-hisiv600-linux-gcc"
+alias arm-hisiv600-linux-g++="color_compile arm-hisiv600-linux-g++"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
