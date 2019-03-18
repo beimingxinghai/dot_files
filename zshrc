@@ -28,7 +28,7 @@ CASE_SENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -60,9 +60,35 @@ HIST_STAMPS="mm/dd/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  z
+  wd
+  pip
   git
+  tig
+  fzf
   tmux
+  jira
+  perms
+  pyenv
+  python
+  pylint
+  gradle
+  docker
+  vscode
+  # vi-mode
   extract
+  history
+  systemd
+  urltools
+  encode64
+  jsontools
+  supervisor
+  tmuxinator
+  rand-quote
+  web-search
+  taskwarrior
+  last-working-dir
+  # per-directory-history
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -70,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,9 +110,29 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-export PATH="/opt/sunrise-linux/bin:$PATH"
+
+# go
+export GOPATH=$HOME/Gocode
+
+# ctags
+export GTAGSLABEL=pygments
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal toolchain
+# Third party,Cross-Toolchain PATH
+export PATH="/opt/third-linux/bin/:$PATH" 
+
+#Pangu firmware,Cross-Toolchain PATH
+export PATH="/opt/sunrise-linux/bin:$PATH"
+
+# Hisilicon Linux, Cross-Toolchain PATH
+export PATH="/opt/hisi-linux/x86-arm/arm-hisiv300-linux/target/bin:$PATH" 
+export PATH="/opt/hisi-linux/x86-arm/arm-hisiv400-linux/target/bin:$PATH" 
+export PATH="/opt/hisi-linux/x86-arm/arm-hisiv510-linux/target/bin:$PATH" 
+export PATH="/opt/hisi-linux/x86-arm/arm-hisiv610-linux/target/bin:$PATH" 
+export PATH="/opt/hisi-linux/x86-arm/arm-hisiv500-linux/target/bin:$PATH" 
+export PATH="/opt/hisi-linux/x86-arm/arm-hisiv600-linux/target/bin:$PATH" 
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -99,9 +146,16 @@ alias gcc="color_compile gcc"
 alias g++="color_compile g++"
 alias make="color_compile make"
 alias ping="prettyping --nolegend"
-alias cat="bat"
-alias top="htop"
+#alias cat="bat"
+#alias top="htop"
 alias help="tldr"
+# alias weather="curl wttr.in"
+#alias grep="ag"
+#alias find="fd"
+alias vim="nvim"
+alias vi="nvim"
+#alias gcc="gcc -fdiagnostics-color=auto"
+#alias g++="g++ -fdiagnostics-color=auto"
 
 alias arm-hisiv300-linux-gcc="color_compile arm-hisiv300-linux-gcc"
 alias arm-hisiv300-linux-g++="color_compile arm-hisiv300-linux-g++"
@@ -109,7 +163,15 @@ alias arm-hisiv400-linux-gcc="color_compile arm-hisiv400-linux-gcc"
 alias arm-hisiv400-linux-g++="color_compile arm-hisiv400-linux-g++"
 alias arm-hisiv500-linux-gcc="color_compile arm-hisiv500-linux-gcc"
 alias arm-hisiv500-linux-g++="color_compile arm-hisiv500-linux-g++"
+alias arm-hisiv500-linux-gcc="color_compile arm-hisiv510-linux-gcc"
+alias arm-hisiv500-linux-g++="color_compile arm-hisiv510-linux-g++"
 alias arm-hisiv600-linux-gcc="color_compile arm-hisiv600-linux-gcc"
 alias arm-hisiv600-linux-g++="color_compile arm-hisiv600-linux-g++"
+alias arm-hisiv600-linux-gcc="color_compile arm-hisiv610-linux-gcc"
+alias arm-hisiv600-linux-g++="color_compile arm-hisiv610-linux-g++"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#if [[ -f ~/.mcfly.zsh ]]; then
+#  source ~/.mcfly.zsh
+#fi
