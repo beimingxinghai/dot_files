@@ -15,7 +15,7 @@
     background = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
-    enable_guicolors = false
+    enable_guicolors = true
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
     statusline_separator = "arrow"
@@ -23,8 +23,8 @@
     buffer_index_type = 4
     windows_index_type = 3
     enable_tabline_filetype_icon = false
-    enable_statusline_display_mode = false
-    statusline_unicode_symbols = false
+    enable_statusline_display_mode = true
+    statusline_unicode_symbols = true
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
 
@@ -69,9 +69,6 @@ name = "lang#c"
 name = "lang#lua"
 
 [[layers]]
-name = "lang#markdown"
-
-[[layers]]
 name = "lang#python"
 
 [[layers]]
@@ -85,3 +82,6 @@ name = "tools"
 
 [[layers]]
 name = "ui"
+
+[[layers]]
+name = "debug"
